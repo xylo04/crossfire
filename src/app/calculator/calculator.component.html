@@ -1,0 +1,44 @@
+<table>
+  <tr>
+    <td><span>Flames extinguished</span></td>
+    <td>
+      <mat-slider [min]="0" [max]="30" [step]="1" [(ngModel)]="flames" [thumbLabel]="true" [tickInterval]="5"
+                  (change)="recalculateTotal()"></mat-slider>
+    </td>
+    <td><span>{{flames}}</span></td>
+  </tr>
+  <tr>
+    <td><span>Under control bonus</span></td>
+    <td>
+      <mat-slide-toggle [disabled]="true" [(ngModel)]="underControl"></mat-slide-toggle>
+    </td>
+    <td><span>{{underControl}}</span></td>
+  </tr>
+  <tr>
+    <td><span>Chemical drums moved</span></td>
+    <td>
+      <mat-slider [min]="0" [max]="3" [step]="1" [(ngModel)]="chemicalDrums" [thumbLabel]="true"
+                  [tickInterval]="1" (change)="recalculateTotal()"></mat-slider>
+    </td>
+    <td><span>{{chemicalDrums}}</span></td>
+  </tr>
+  <tr>
+    <td><span>Manikin rescued</span></td>
+    <td>
+      <mat-slide-toggle [(ngModel)]="manikinRescued" (change)="recalculateTotal()"></mat-slide-toggle>
+    </td>
+    <td><span>{{manikinRescued}}</span></td>
+  </tr>
+  <tr>
+    <td><span>Manikin rescue seconds remaining</span></td>
+    <td>
+      <mat-slider [min]="0" [max]="180" [step]="1" [invert]="true" [(ngModel)]="manikinTimeBonus" [thumbLabel]="true"
+                  [tickInterval]="30" [disabled]="!manikinRescued" (change)="recalculateTotal()"></mat-slider>
+    </td>
+    <td><span>{{manikinTimeBonus}}</span></td>
+  </tr>
+  <tr>
+    <td><span>Total</span></td>
+    <td><span>{{total}}</span></td>
+  </tr>
+</table>
