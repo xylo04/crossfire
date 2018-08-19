@@ -8,7 +8,8 @@ import {
   MatButtonModule,
   MatSidenavModule,
   MatIconModule,
-  MatListModule
+  MatListModule,
+  MatCardModule,
 } from '@angular/material';
 import {FormsModule} from '@angular/forms';
 
@@ -35,6 +36,7 @@ import {LayoutModule} from '@angular/cdk/layout';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
+    MatCardModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
