@@ -1,5 +1,7 @@
 # Crossfire
 
+This project is a calculator for the [BEST Robotics, Inc.](http://bestinc.org/) 2017 game, "Crossfire."
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.4.
 
 ## Development server
